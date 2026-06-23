@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession, signOut } from "next-auth/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Disc as Discord } from "lucide-react";
+import { Menu, X, Disc as Discord, User, LogOut } from "lucide-react";
 import PremiumButton from "./PremiumButton";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
+  const { data: session } = useSession();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,7 +27,6 @@ const Navbar = () => {
     { name: "Store", href: "/store" },
     { name: "Rules", href: "/rules" },
     { name: "Terms", href: "/terms" },
-    { name: "Support", href: "/support" },
   ];
 
   return (
@@ -36,7 +37,6 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
             <Image src="/assets/logo.png" alt="MineFuture Logo" fill className="object-contain" />
@@ -46,7 +46,6 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Center: Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -59,20 +58,35 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Right: Actions */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/login" className="text-foreground/70 hover:text-white transition-colors font-oswald uppercase tracking-widest text-sm mr-4">
-            Login
-          </Link>
-          <Link href="https://discord.gg/jTb3WYtXJz" target="_blank">
-             <PremiumButton variant="glass" className="px-4 py-2 flex items-center gap-2">
-                <Discord size={18} />
-                Discord
-             </PremiumButton>
-          </Link>
+          {session ? (
+            <div className="flex items-center gap-4">
+              <Link href="/dashboard" className="flex items-center gap-2 text-white hover:text-primary-gold transition-colors font-oswald uppercase tracking-widest text-sm">
+                 <User size={16} />
+                 Dashboard
+              </Link>
+              <button
+                onClick={() => signOut()}
+                className="text-foreground/50 hover:text-red-500 transition-colors"
+              >
+                <LogOut size={18} />
+              </button>
+            </div>
+          ) : (
+            <>
+              <Link href="/login" className="text-foreground/70 hover:text-white transition-colors font-oswald uppercase tracking-widest text-sm mr-4">
+                Login
+              </Link>
+              <Link href="https://discord.gg/jTb3WYtXJz" target="_blank">
+                 <PremiumButton variant="glass" className="px-4 py-2 flex items-center gap-2">
+                    <Discord size={18} />
+                    Discord
+                 </PremiumButton>
+              </Link>
+            </>
+          )}
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -81,7 +95,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -101,8 +114,17 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="flex flex-col gap-4 pt-4 border-t border-white/10">
-              <Link href="/login" className="text-center font-oswald text-foreground/80 uppercase">Login</Link>
-              <PremiumButton variant="gold" className="w-full">Play Now</PremiumButton>
+              {session ? (
+                <>
+                  <Link href="/dashboard" onClick={() => setIsMobileMenuOpen(false)} className="text-center font-oswald text-white uppercase">Dashboard</Link>
+                  <button onClick={() => signOut()} className="text-center font-oswald text-red-500 uppercase">Logout</button>
+                </>
+              ) : (
+                <>
+                  <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-center font-oswald text-foreground/80 uppercase">Login</Link>
+                  <PremiumButton variant="gold" className="w-full">Play Now</PremiumButton>
+                </>
+              )}
             </div>
           </motion.div>
         )}

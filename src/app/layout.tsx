@@ -3,6 +3,7 @@ import { Inter, Oswald, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { AuthProvider } from "@/components/auth/AuthProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,11 +33,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="${inter.variable} ${oswald.variable} ${jetbrainsMono.variable}">
       <body className="bg-bg-gradient min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow pt-20">
-          {children}
-        </main>
-        <Footer />
+        <AuthProvider>
+          <Navbar />
+          <main className="flex-grow pt-20">
+            {children}
+          </main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
