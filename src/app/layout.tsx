@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { AuthProvider } from "@/components/auth/AuthProvider";
+import AllayCompanion from "@/components/AllayCompanion";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,13 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="${inter.variable} ${oswald.variable} ${jetbrainsMono.variable}">
+    <html lang="en" className={`${inter.variable} ${oswald.variable} ${jetbrainsMono.variable}`}>
       <body className="bg-bg-gradient min-h-screen flex flex-col">
         <AuthProvider>
           <Navbar />
           <main className="flex-grow pt-20">
             {children}
           </main>
+          <AllayCompanion />
           <Footer />
         </AuthProvider>
       </body>
