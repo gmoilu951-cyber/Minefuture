@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+
+  --color-primary-gold: #ffd700;
+  --color-primary-gold-dim: #ffc107;
+  --color-primary-orange: #ff8c00;
+  --color-primary-orange-dim: #ff6b00;
+
+  --color-navy-light: #1e1b4b;
+  --color-navy-default: #0f172a;
+  --color-navy-dark: #111827;
+
+  --color-accent-gold: #f59e0b;
+  --color-accent-orange: #f97316;
+
+  --background-image-gold-gradient: linear-gradient(to right, #ffd700, #ffc107);
+  --background-image-orange-gradient: linear-gradient(to right, #ff8c00, #ff6b00);
+  --background-image-premium-gradient: linear-gradient(to right, #ffd700, #ff8c00, #ff6b00);
+  --background-image-bg-gradient: linear-gradient(to bottom right, #0f172a, #1e1b4b, #111827);
+
+  --font-oswald: var(--font-oswald);
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+@layer base {
+  body {
+    @apply bg-navy-default text-foreground;
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .premium-button {
+    @apply relative overflow-hidden transition-all duration-300 transform hover:scale-105 active:scale-95 px-6 py-3 rounded-md uppercase tracking-wider;
+    font-family: var(--font-oswald);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
+  }
+
+  .text-gradient-gold {
+    background-image: var(--background-image-gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Custom Shine Animation */
+@keyframes shine {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+.animate-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: skewX(-15deg);
+  animation: shine 3s infinite;
+}
