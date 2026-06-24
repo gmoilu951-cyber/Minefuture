@@ -87,3 +87,28 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
  GET /api/auth/session 200 in 39ms (next.js: 27ms, application-code: 12ms)
 [browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
  GET /checkout 200 in 874ms (next.js: 797ms, application-code: 77ms)
+ GET / 200 in 1478ms (next.js: 287ms, application-code: 1191ms)
+[browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[next-auth][warn][NEXTAUTH_URL]
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NO_SECRET]
+https://next-auth.js.org/warnings#no_secret
+ GET /api/auth/session 200 in 414ms (next.js: 367ms, application-code: 47ms)
+[browser] Image with src "/assets/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+ GET /store 200 in 110ms (next.js: 17ms, application-code: 93ms)
+ GET /api/auth/session 200 in 42ms (next.js: 28ms, application-code: 13ms)
+[browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /checkout 200 in 98ms (next.js: 31ms, application-code: 67ms)
+ GET /store 200 in 253ms (next.js: 31ms, application-code: 223ms)
+[browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /api/auth/session 200 in 121ms (next.js: 90ms, application-code: 31ms)
+ GET /checkout 200 in 67ms (next.js: 19ms, application-code: 48ms)
+ GET /store 200 in 113ms (next.js: 4ms, application-code: 109ms)
+ GET /api/auth/session 200 in 56ms (next.js: 31ms, application-code: 25ms)
+[browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /checkout 200 in 41ms (next.js: 5ms, application-code: 36ms)
+ GET /store 200 in 77ms (next.js: 4ms, application-code: 74ms)
+ GET /api/auth/session 200 in 52ms (next.js: 30ms, application-code: 21ms)
+[browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /checkout 200 in 36ms (next.js: 4ms, application-code: 32ms)
