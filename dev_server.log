@@ -5,21 +5,40 @@
 ▲ Next.js 16.2.9 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 518ms
+✓ Ready in 766ms
 
- GET / 200 in 815ms (next.js: 282ms, application-code: 533ms)
+ GET / 200 in 1004ms (next.js: 421ms, application-code: 583ms)
 ⨯ upstream image response failed for https://images.unsplash.com/photo-1607988523713-a921406407c6?auto=format&fit=crop&w=800&q=80 404
+[browser] Image with src "https://images.unsplash.com/photo-1607988523713-a921406407c6?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /api/auth/session 200 in 473ms
+[next-auth][warn][NEXTAUTH_URL]
+https://next-auth.js.org/warnings#nextauth_url
+[next-auth][warn][NO_SECRET]
+https://next-auth.js.org/warnings#no_secret
+ GET / 200 in 124ms (next.js: 4ms, application-code: 120ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1607988523713-a921406407c6?auto=format&fit=crop&w=800&q=80 404
+[browser] Image with src "https://images.unsplash.com/photo-1607988523713-a921406407c6?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ GET /api/auth/session 200 in 34ms (next.js: 19ms, application-code: 15ms)
+[browser] Image with src "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/assets/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+ GET / 200 in 120ms (next.js: 4ms, application-code: 116ms)
+⨯ upstream image response failed for https://images.unsplash.com/photo-1607988523713-a921406407c6?auto=format&fit=crop&w=800&q=80 404
+ GET /api/auth/session 200 in 93ms (next.js: 68ms, application-code: 25ms)
 [browser] Image with src "https://images.unsplash.com/photo-1607988523713-a921406407c6?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [browser] Image with src "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [browser] Image with src "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [browser] Image with src "/assets/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[next-auth][warn][NEXTAUTH_URL]
-https://next-auth.js.org/warnings#nextauth_url
-[next-auth][warn][NO_SECRET]
-https://next-auth.js.org/warnings#no_secret
- GET /api/auth/session 200 in 2.3s (next.js: 2.2s, application-code: 43ms)
-[browser] Image with src "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[browser] Image with src "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[browser] Image with src "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+⨯ upstream image response failed for https://images.unsplash.com/photo-1607988523713-a921406407c6?auto=format&fit=crop&w=800&q=80 404
+ GET / 200 in 188ms (next.js: 6ms, application-code: 182ms)
+ GET /api/auth/session 200 in 49ms (next.js: 30ms, application-code: 19ms)
+[browser] Image with src "/assets/logo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[browser] Image with src "/assets/logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
