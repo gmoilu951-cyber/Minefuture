@@ -3,11 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Shield, Zap, Sparkles, Trophy, Users, Star, Activity } from "lucide-react";
+import { Shield, Zap, Sparkles, Trophy, Activity } from "lucide-react";
 import PremiumButton from "@/components/PremiumButton";
 import GlassCard from "@/components/GlassCard";
 import CopyIPWidget from "@/components/CopyIPWidget";
 import ServerStatus from "@/components/ServerStatus";
+import NewsSection from "@/components/NewsSection";
 
 const FeatureCard = ({ icon: Icon, title, description }: any) => (
   <GlassCard className="group hover:-translate-y-2 transition-all duration-500 flex flex-col items-center text-center">
@@ -131,6 +132,9 @@ export default function Home() {
           <ServerStatus />
         </div>
       </section>
+
+      {/* News & Updates Section */}
+      <NewsSection />
 
       {/* Statistics Section */}
       <section className="py-24 px-6">
