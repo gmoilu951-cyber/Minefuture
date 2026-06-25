@@ -104,3 +104,17 @@
   50% { transform: scale(1.1) translate(2%, 2%); }
   100% { transform: scale(1) translate(-2%, -2%); }
 }
+
+/* Gooey Navigation Effects */
+.gooey-filter {
+  filter: url('#goo-nav');
+}
+
+@keyframes nav-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.5); }
+}
+
+.nav-active-glow {
+  animation: nav-glow 3s infinite;
+}
